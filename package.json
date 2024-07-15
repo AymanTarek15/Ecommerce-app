@@ -1,7 +1,7 @@
 {
   "name": "e-commerce",
   "version": "0.1.0",
-  "homepage": "https://AymanTarek15.github.io/My-products",
+  "homepage": "https://AymanTarek15.github.io/Ecommerce-app",
   "private": true,
   "dependencies": {
     "@reduxjs/toolkit": "^2.2.6",
@@ -43,6 +43,6 @@
     ]
   },
   "devDependencies": {
-    "gh-pages": "^6.1.0"
+    "gh-pages": "^6.1.1"
   }
 }
