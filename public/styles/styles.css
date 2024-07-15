@@ -1,5 +1,19 @@
 body {
     background-color: rgb(234, 223, 243);
+    min-height: 100vh;
+    position: relative;
+}
+
+nav{
+  height: 4.5rem;
+}
+
+.nav-size{
+  height: 0rem;
+}
+
+nav #brand:hover{
+  background-color:unset;
 }
 
 nav a {
@@ -21,6 +35,37 @@ nav button:hover {
     color: white !important;
 }
 
+#cart:hover{
+  background-color: unset;
+}
+
+.cart-number{
+  position: relative;
+  border-radius: 50%;
+  background-color: red;
+  width: 1.5rem;
+  height: 1.5rem;
+  top: 1.4rem;
+  left: 2rem;
+}
+
+.my-scroll{
+  position: absolute;
+  right: -100.8rem;
+  top:3.05rem !important;
+  left:0;
+  max-height: 30vh;
+  overflow: hidden;
+  overflow-y: auto;
+}
+
+.close-button{
+  text-decoration: none;
+  border: none;
+  position: absolute;
+  right: 1rem;
+  font-size: 2rem
+}
 /* .btn-outline-primary {
     --bs-btn-color: #0d6efd;
     --bs-btn-border-color: #0d6efd;
@@ -41,6 +86,45 @@ nav button:hover {
 nav input:focus {
     border-color: blueviolet !important;
     box-shadow: 0 0 0 0.05rem blueviolet !important;
+}
+
+/* home page */
+
+#home-page{
+  margin-top: 2rem;
+}
+
+#category-products{
+  text-align: left;
+  margin: 3rem 2rem;
+  
+}
+
+.category-products-container{
+  margin: 1rem 0rem;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  
+}
+
+.category-image{
+width: 30rem;
+height: 20rem ;
+margin-bottom: 2rem;
+}
+
+/* .category-item{
+  
+} */
+/* products page */
+
+.products-page{
+  margin-top: 3rem;
+}
+
+.products-title{
+  margin-bottom: 2rem;
 }
 
 .container {
@@ -76,7 +160,90 @@ img {
     width: 100%;
 }
 
+#personal-info{
+  margin: 2rem;
+  display: flex;
+  justify-content: center;
+  min-height: 69.6vh;
+}
 
+#personal-info form{
+  border: 2px blueviolet solid;
+  padding: 1rem;
+}
+
+.my-form{
+  width: 70%;
+  text-align: center;
+}
+
+form textarea{
+  margin: auto;
+  width: 50% !important;
+  height: 5rem;
+}
+footer{
+  /* position: absolute; */
+  /* bottom: 0; */
+  /* height: 20vh; */
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: start; */
+  
+}
+.footer{
+  display: flex;
+  justify-content: center;
+  align-items: start;
+}
+
+.footer-container{
+  height: 12vh;
+  width: 100vw;
+  display: flex;
+  justify-content: space-around;
+  align-items: start;
+  padding-top: 1rem;
+  
+  /* margin-top: 5vh; */
+}
+
+.footer-container a{
+  text-decoration: none;
+  color: white;
+  font-size: 0.8rem
+}
+
+#checkout-page{
+  min-height: 76.3vh;
+}
+
+#checkout-products{
+
+  margin: auto;
+  display: grid;
+  place-content: center;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: 0.3s;
+  text-align: center;
+  box-shadow: 0px 0px 4px 1px;
+  position: relative;
+  width: 30%;
+}
+
+#about-page{
+  height: 76.3vh;
+}
+#contact-page{
+  height: 76.3vh;
+}
+#checkout-products:hover {
+  background-color:
+      blueviolet;
+  transform: scale(1.05);
+}
 @media screen and (max-width:1200px) {
     .container {
         padding: 1rem;
@@ -97,4 +264,69 @@ img {
             repeat(1, 1fr);
 
     }
+}
+@media (max-width: 991px) {
+  .category-image {
+    width: 20rem;
+    height: 20rem;
+    margin-bottom: 2rem;
+  }
+  .cart-div{
+    /* position: absolute; */
+    right: 0;
+  }
+
+  .navbar{
+    display: flex !important;
+    align-items: center !important;
+    /* align-content: center !important; */
+  }
+
+  .nav-size{
+    position: absolute;
+    top:-1rem
+  }
+  
+  #checkout-products{
+    width: 80%;
+  }
+  form textarea{
+    width: 90% !important;
+    min-height: 5rem;
+  }
+  .my-scroll{
+    position: absolute;
+    right: -100.8rem;
+    top:2.8rem !important;
+    left:0;
+    max-height: 30vh;
+    overflow: hidden;
+    overflow-y: auto;
+  }
+}
+
+.error-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 76vh;
+}
+
+.error-content {
+  text-align: center;
+  color: black;
+}
+
+.error-code {
+  font-size: 6rem;
+  font-weight: bold;
+}
+
+.error-message {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.btn-home {
+  margin-top: 1rem;
 }

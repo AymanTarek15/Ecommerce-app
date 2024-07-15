@@ -1,65 +1,46 @@
-// fetch => return response object
-import React, { useEffect, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { counterActions, priceActions, productsActions, selectedProductsActions } from '../store';
+import { Link } from 'react-router-dom';
+import { useEffect } from 'react';
 
 function Products() {
-    const [products, setProducts] = useState([])
-
-    // let res = fetch('https://dummyjson.com/product');
-    // console.log(res);  ///   promise
-
+    const dispatch = useDispatch();
+    const products = useSelector(state => state.products.products);
+    
     useEffect(() => {
-        fetch('https://dummyjson.com/product')
-            .then(response => response.json())
-            .then(data => setProducts(data.products))
-            .catch(error => console.error('Error fetching products:', error));
+      fetch('https://dummyjson.com/products')
+          .then(response => response.json())
+          .then(data => {
+              dispatch(productsActions.setProducts(data.products));
+          })
+          .catch(error => console.error('Error fetching products:', error));
+  }, [dispatch]);
 
-    }, []);
-    // console.log(products);
-    // console.log(data.products);
-    // myData.products.length = 10;
-
-    // console.log(product);
-    // const productDiv = document.createElement('div');
-    // const barnd = document.createElement('h1');
-    // const desc = document.createElement('p')
-    // const discount = document.createElement('p');
-    // const rate = document.createElement('p')
-    // const prodImg = document.createElement('img');
-
+    function handleAddClick(price, product) {
+        dispatch(counterActions.increment());
+        dispatch(priceActions.increase(price));
+        dispatch(selectedProductsActions.addProduct(product));
+    }
     return (
-        <div><h1>Products</h1>
-            <div className="container ">
-                {products.map(product =>
-                    <div className='product' key={product.id}>
-                        <h1>{product.brand}</h1>
+        <div className='products-page'>
+            <h1 className='products-title'>Products</h1>
+            <div className="container">
+                {products.map(product => (
+                    <div className='product' style={{ position: 'relative' }} key={product.id}>
+                        <img src={product.thumbnail} alt={product.brand} style={{ height: '25vh' }} />
+                        <hr />
+                        <h1>{product.title}</h1>
+                        <h4>{product.brand}</h4>
                         <p>{product.description}</p>
-                        <p>Discount :{product.discountPercentage}</p>
-                        <p>rate : {product.rating}</p>
-                        <img src={product.thumbnail} alt={product.brand} />
-                    </div>)}
+                        <h5>rating : {product.rating > 4.5 ? '⭐⭐⭐⭐⭐' : product.rating > 3.5 ? '⭐⭐⭐⭐' : '⭐⭐⭐'} {product.rating} </h5>
+                        <h4 style={{ marginBottom: '3rem' }}>Price : {(product.price).toFixed(2)} EGP</h4>
+                        <Link className='btn'></Link>
+                        <button onClick={() => handleAddClick(product.price, product)} className='btn btn-warning' style={{ width: '10rem', margin: 'auto', position: 'absolute', bottom: '0', left: '27%' }}>Add to cart 🛒</button>
+                    </div>
+                ))}
             </div>
-
-        </div>)
-
-    // <div className="container">
-    //     <div>
-    //         <h1>{product.brand}</h1>
-    //         <p>{product.description}</p>
-    //         <p>Discount :{product.discountPercentage}</p>
-    //         <p>rate : {product.rating}</p>
-    //     </div>
-    // </div>)
-
-    // barnd.textContent = `${product.brand}`
-    // desc.textContent = `${product.description}`
-    // discount.innerHTML = `Dicount : <span>${product.discountPercentage}</span>`
-    // rate.textContent = `rate : ${product.rating}`
-    // prodImg.setAttribute('src', product.thumbnail);
-    // productDiv.append(prodImg, barnd, desc, discount, rate);
-    // productDiv.classList.add('student')
-    // container.appendChild(productDiv)
-
+        </div>
+    );
 }
-
 
 export default Products;
