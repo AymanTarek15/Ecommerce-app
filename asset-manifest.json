@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Ecommerce-app/static/css/main.f855e6bc.css",
-    "main.js": "/Ecommerce-app/static/js/main.4b3875fb.js",
+    "main.js": "/Ecommerce-app/static/js/main.cc259c9a.js",
     "static/media/beauty.jpeg": "/Ecommerce-app/static/media/beauty.e4dba972b53148a3f61f.jpeg",
     "static/media/furniture.jpeg": "/Ecommerce-app/static/media/furniture.f301ace4b7a1f813dc40.jpeg",
     "static/media/technology.jpg": "/Ecommerce-app/static/media/technology.fc2af5740ca76dbf76a6.jpg",
@@ -10,10 +10,10 @@
     "static/media/watches.jpg": "/Ecommerce-app/static/media/watches.459257f83acb2ec73b7d.jpg",
     "index.html": "/Ecommerce-app/index.html",
     "main.f855e6bc.css.map": "/Ecommerce-app/static/css/main.f855e6bc.css.map",
-    "main.4b3875fb.js.map": "/Ecommerce-app/static/js/main.4b3875fb.js.map"
+    "main.cc259c9a.js.map": "/Ecommerce-app/static/js/main.cc259c9a.js.map"
   },
   "entrypoints": [
     "static/css/main.f855e6bc.css",
-    "static/js/main.4b3875fb.js"
+    "static/js/main.cc259c9a.js"
   ]
 }
