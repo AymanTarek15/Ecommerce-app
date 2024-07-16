@@ -18,7 +18,7 @@ function Details() {
         .catch(error => console.error('Error fetching products:', error));
 }, [dispatch]);
 
-function handleAddClick(price, product) {
+function handleAddClick(event,price, product) {
   dispatch(counterActions.increment());
   dispatch(priceActions.increase(price));
   dispatch(selectedProductsActions.addProduct(product));
@@ -40,7 +40,7 @@ function handleAddClick(price, product) {
       <p>{selectedProduct.description}</p>
       <h3>Price: {selectedProduct.price} EGP</h3>
       <br />
-      <Link onClick={handleAddClick} className="btn btn-success">Add to cart</Link>
+      <Link onClick={(event)=>handleAddClick(event,selectedProduct.price,selectedProduct)} className="btn btn-success">Add to cart</Link>
       <br />
       <br />
       {/* <p>Rating: {selectedProduct.rating}</p> */}
