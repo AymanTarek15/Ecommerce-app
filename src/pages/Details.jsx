@@ -29,21 +29,23 @@ function handleAddClick(price, product) {
   }
 
   return (
-    <>
-      {/* <h1>Details Page</h1> */}
+    
+    
       <div id="details-page">
+        <br />
+        <br />
       <h1>{selectedProduct.title}</h1>
-      <img style={{width:'25rem'}} src={selectedProduct.thumbnail} alt={selectedProduct.title} />
+      <img style={{width:'15rem'}} src={selectedProduct.thumbnail} alt={selectedProduct.title} />
       <h4>Brand: {selectedProduct.brand}</h4>
       <p>{selectedProduct.description}</p>
       <h3>Price: {selectedProduct.price} EGP</h3>
-      {/* <br /> */}
+      <br />
       <Link onClick={handleAddClick} className="btn btn-success">Add to cart</Link>
       <br />
       <br />
       {/* <p>Rating: {selectedProduct.rating}</p> */}
       </div>
-    </>
+    
   );
 }
 
