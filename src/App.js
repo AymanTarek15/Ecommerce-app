@@ -16,11 +16,11 @@ import Details from './pages/Details';
 
 
 const router = createBrowserRouter(createRoutesFromElements(
-  <Route path='/' element={<RootLayout />}>
+  <Route path='/Ecommerce-app' element={<RootLayout />}>
     <Route index element={<Home />}/>
     <Route path='products' element={<ProductsPage />}/>
-    <Route path='/:id' element={<Categories />} />
-    <Route path='/:id/:title' element={<Details />} />
+    <Route path=':id' element={<Categories />} />
+    <Route path=':id/:title' element={<Details />} />
     <Route path='about' element={<About />}/>
     <Route path='contact' element={<Contact />} />
     <Route path='checkout' element={<CheckOut />} />

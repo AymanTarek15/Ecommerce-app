@@ -20,12 +20,12 @@ function NavBar() {
     <nav className="navbar navbar-expand-lg bg-body-dark bg-dark">
       <div className="container-fluid nav-pills bg-dark nav-size">
         <div>
-          <Link id="brand" className="navbar-brand" to="/">E-Shop</Link>
+          <Link id="brand" className="navbar-brand" to="/Ecommerce-app">E-Shop</Link>
         </div>
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0 bg-dark">
             <li className="nav-item bg-dark">
-              <NavLink className="nav-link bg-dark" aria-current="page" to="/">Home</NavLink>
+              <NavLink className="nav-link bg-dark" aria-current="page" to="/Ecommerce-app">Home</NavLink>
             </li>
             <li className="nav-item">
               <NavLink className="nav-link bg-dark" aria-current="page" to="products">Products</NavLink>
