@@ -330,3 +330,8 @@ footer{
 .btn-home {
   margin-top: 1rem;
 }
+
+#details-page{
+  width: 30rem;
+  margin: auto;
+}

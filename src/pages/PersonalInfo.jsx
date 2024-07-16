@@ -58,7 +58,7 @@ function PersonalInfo(){
   <label  className="form-check-label" for="invalidCheck">
         Describe your address
       </label>
-  <textarea style={{marginTop:'0'}} id="validationCustom05" className="form-control" name="address" id=""></textarea>
+  <textarea style={{marginTop:'0'}} id="validationCustom05" className="form-control" name="address"></textarea>
   <div className="col-12" >
     <div style={{display:'flex', justifyContent:'center', alignContent:'center', gap:'0.2rem'}} className="form-check">
       <input className="form-check-input" type="checkbox" value="" id="invalidCheck" required />

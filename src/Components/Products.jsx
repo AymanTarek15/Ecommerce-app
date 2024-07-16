@@ -26,7 +26,7 @@ function Products() {
             <h1 className='products-title'>Products</h1>
             <div className="container">
                 {products.map(product => (
-                    <div className='product' style={{ position: 'relative' }} key={product.id}>
+                   <div className='product' style={{ position: 'relative' }} key={product.id}>
                         <img src={product.thumbnail} alt={product.brand} style={{ height: '25vh' }} />
                         <hr />
                         <h1>{product.title}</h1>
@@ -34,9 +34,12 @@ function Products() {
                         <p>{product.description}</p>
                         <h5>rating : {product.rating > 4.5 ? '⭐⭐⭐⭐⭐' : product.rating > 3.5 ? '⭐⭐⭐⭐' : '⭐⭐⭐'} {product.rating} </h5>
                         <h4 style={{ marginBottom: '3rem' }}>Price : {(product.price).toFixed(2)} EGP</h4>
-                        <Link className='btn'></Link>
+                        <Link style={{ width: '10rem', margin: 'auto', position: 'absolute', bottom: '3rem', left: '27%' }} to={product.title} className='btn btn-success'>Check details</Link>
+                        <br />
+                        <br />
                         <button onClick={() => handleAddClick(product.price, product)} className='btn btn-warning' style={{ width: '10rem', margin: 'auto', position: 'absolute', bottom: '0', left: '27%' }}>Add to cart 🛒</button>
                     </div>
+                  
                 ))}
             </div>
         </div>

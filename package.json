@@ -1,7 +1,7 @@
 {
-  "name": "e-commerce",
+  "name": "e-commerce-app",
   "version": "0.1.0",
-  "homepage": "https://AymanTarek15.github.io/Ecommerce-app",
+  "homepage": "https://aymantarek15.github.io/Ecommerce-app",
   "private": true,
   "dependencies": {
     "@reduxjs/toolkit": "^2.2.6",
@@ -44,5 +44,10 @@
   },
   "devDependencies": {
     "gh-pages": "^6.1.1"
-  }
+  },
+  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
+  "main": "index.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }

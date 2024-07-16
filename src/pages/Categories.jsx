@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useParams } from "react-router-dom";
-import { counterActions, filteredProductsActions, priceActions, productsActions, selectedProductsActions } from "../store";
+import { counterActions, priceActions, productsActions, selectedProductsActions } from "../store";
 import Error from "./Error";
 import { useEffect } from "react";
 
@@ -44,7 +44,10 @@ function Categories() {
             <p>{product.description}</p>
             <h5>rating : {product.rating > 4.5 ? '⭐⭐⭐⭐⭐' : product.rating > 3.5 ? '⭐⭐⭐⭐' : '⭐⭐⭐'} {product.rating} </h5>
             <h4 style={{ marginBottom: '3rem' }}>Price : {(product.price).toFixed(2)} EGP</h4>
-            <Link className='btn'></Link>
+            <br />
+            <br />
+            <br />
+            <Link to={product.title} style={{ width: '10rem', margin: 'auto', position: 'absolute', bottom: '3rem', left: '27%' }} className='btn btn-success'>Check details</Link>
             <button onClick={() => handleAddClick(product.price, product)} className='btn btn-warning' style={{ width: '10rem', margin: 'auto', position: 'absolute', bottom: '0', left: '27%' }}>Add to cart 🛒</button>
           </div>
         ))}
