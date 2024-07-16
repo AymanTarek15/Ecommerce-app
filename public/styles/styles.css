@@ -96,7 +96,7 @@ nav input:focus {
 
 #category-products{
   text-align: left;
-  margin: 3rem 2rem;
+  /* margin: 3rem 2rem; */
   
 }
 
@@ -358,8 +358,17 @@ form textarea{
   overflow-y: auto;
 }
 #details-page{
+  padding: 0.5rem;
   width: 20rem;
   min-height: 74.2vh;
   margin: auto;
+  box-shadow: 0px 0px 4px 1px;
 }
+/* .category-image{
+  width: 20rem;
+  height: 20rem ;
+  margin-bottom: 2rem;
+  transition: 0.3s;
+  box-shadow: 0px 0px 4px 1px;
+  } */
 }

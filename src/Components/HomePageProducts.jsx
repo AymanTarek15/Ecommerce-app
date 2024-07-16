@@ -12,7 +12,7 @@ function HomePageProducts() {
 
   return (
     <div id="category-products">
-      <h3>Shop by category</h3>
+      <h3 style={{marginLeft:'1rem'}}>Shop by category</h3>
       <br />
       <br />
       <div className="category-products-container container-fluid text-center" >
